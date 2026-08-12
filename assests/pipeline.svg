@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 340" width="1220" height="340" role="img" aria-label="Research pipeline: hypothesis, kill condition, observational and interventional checks">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/>
+    </marker>
+    <marker id="ahd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6E56CF"/>
+    </marker>
+    <style>
+      .lbl { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; fill: #e6edf3; text-anchor: middle; }
+      .edge { fill: none; stroke: #8b949e; stroke-width: 2; }
+      .tag { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; fill: #8b949e; text-anchor: middle; }
+      .box { fill: #161b22; stroke: #6E56CF; stroke-width: 1.6; }
+    </style>
+  </defs>
+
+  <rect width="1220" height="340" rx="10" fill="#0d1117"/>
+
+  <!-- A: Hypothesis -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.02;0.07;0.92;1"/>
+    <ellipse cx="85" cy="140" rx="70" ry="26" fill="#6E56CF"/>
+    <text class="lbl" x="85" y="145" font-size="14">Hypothesis</text>
+  </g>
+
+  <!-- A -> B -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.07;0.12;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M155,140 H192" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.07;0.12;0.92;1"/>
+    </path>
+  </g>
+
+  <!-- B: Kill condition -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.12;0.17;0.92;1"/>
+    <rect class="box" x="200" y="114" width="152" height="52" rx="6"/>
+    <text class="lbl" x="276" y="145" font-size="13">Kill condition</text>
+  </g>
+
+  <!-- B -> C -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.17;0.22;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M352,140 H392" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.17;0.22;0.92;1"/>
+    </path>
+  </g>
+
+  <!-- C: Run it -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.22;0.27;0.92;1"/>
+    <rect class="box" x="400" y="114" width="110" height="52" rx="6"/>
+    <text class="lbl" x="455" y="145" font-size="13">Run it</text>
+  </g>
+
+  <!-- C -> D -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.27;0.32;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M510,140 H540" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.27;0.32;0.92;1"/>
+    </path>
+  </g>
+
+  <!-- D: Observational? -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.32;0.37;0.92;1"/>
+    <path d="M630,88 L715,140 L630,192 L545,140 Z" fill="#161b22" stroke="#8b949e" stroke-width="1.6"/>
+    <text class="lbl" x="630" y="144" font-size="12">Observational?</text>
+  </g>
+
+  <!-- D -yes-> E -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.37;0.42;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M715,140 H792" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.37;0.42;0.92;1"/>
+    </path>
+    <text class="tag" x="753" y="128">yes</text>
+  </g>
+
+  <!-- E: Interventional? -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.42;0.47;0.92;1"/>
+    <path d="M890,88 L975,140 L890,192 L805,140 Z" fill="#161b22" stroke="#8b949e" stroke-width="1.6"/>
+    <text class="lbl" x="890" y="144" font-size="12">Interventional?</text>
+  </g>
+
+  <!-- E -yes-> F -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.47;0.52;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M975,140 H1024" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.47;0.52;0.92;1"/>
+    </path>
+    <text class="tag" x="1000" y="128">yes</text>
+  </g>
+
+  <!-- F: finding -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.52;0.57;0.92;1"/>
+    <ellipse cx="1118" cy="140" rx="92" ry="26" fill="#2EA043"/>
+    <text class="lbl" x="1118" y="145" font-size="12">Now it's a finding</text>
+  </g>
+
+  <!-- D -no-> K -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.59;0.64;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M630,192 C630,238 676,254 710,258" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.59;0.64;0.92;1"/>
+    </path>
+    <text class="tag" x="612" y="228">no</text>
+  </g>
+
+  <!-- E -no-> K -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.64;0.69;0.92;1"/>
+    <path class="edge" marker-end="url(#ah)" d="M890,192 C890,238 844,254 810,258" stroke-dasharray="400" stroke-dashoffset="400">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" values="400;400;0;0;0" keyTimes="0;0.64;0.69;0.92;1"/>
+    </path>
+    <text class="tag" x="908" y="228">no</text>
+  </g>
+
+  <!-- K: kill -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.69;0.74;0.92;1"/>
+    <ellipse cx="760" cy="276" rx="84" ry="25" fill="#B31B1B"/>
+    <text class="lbl" x="760" y="281" font-size="13">Kill it. Log it.</text>
+  </g>
+
+  <!-- K -.-> A -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.74;0.79;0.92;1"/>
+    <path fill="none" stroke="#6E56CF" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#ahd)"
+          d="M676,276 H112 C86,276 85,250 85,172"/>
+  </g>
+</svg>
