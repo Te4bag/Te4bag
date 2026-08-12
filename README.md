@@ -38,23 +38,9 @@ I work on interpretability and explainability of language models — and on the 
 
 **How that actually plays out:**
 
-```mermaid
-flowchart LR
-    A([Hypothesis]) --> B[Kill condition]
-    B --> C[Run it]
-    C --> D{Observational?}
-    D -- no --> K([Kill it. Log it.])
-    D -- yes --> E{Interventional?}
-    E -- no --> K
-    E -- yes --> F([Now it's a finding])
-    K -.-> A
-
-    style A fill:#6E56CF,stroke:#6E56CF,color:#fff
-    style F fill:#2EA043,stroke:#2EA043,color:#fff
-    style K fill:#B31B1B,stroke:#B31B1B,color:#fff
-    style B fill:#1F2937,stroke:#6E56CF,color:#fff
-    style C fill:#1F2937,stroke:#6E56CF,color:#fff
-```
+<p align="center">
+  <img src="assets/pipeline.svg" alt="Hypothesis, kill condition, observational check, interventional check, or kill it and log it" width="100%">
+</p>
 
 ---
 
